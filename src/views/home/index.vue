@@ -15,7 +15,7 @@
         </swiper>
       </swiper-slide>
       <swiper-slide>
-        <img src="https://image.veseo.cn/v3kjdc4xcv90ia6o2s" alt="" />
+        <HomePage2 />
       </swiper-slide>
       <swiper-slide>
         <img src="https://image.veseo.cn/im3m8f3xyp9hfzzvx9" alt="" />
@@ -28,6 +28,7 @@
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/swiper-bundle.css'
+import HomePage2 from './components/HomePage2.vue'
 
 const slides = ref([
   { id: 1, image: 'https://image.veseo.cn/gx5jesf9qty5vprnzb', alt: 'Slide 1' },
