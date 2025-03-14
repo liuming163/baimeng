@@ -21,6 +21,9 @@
         <HomePage3 />
       </swiper-slide>
       <swiper-slide>
+        <HomePage4 class="home-page" />
+      </swiper-slide>
+      <swiper-slide>
         <img src="https://image.veseo.cn/im3m8f3xyp9hfzzvx9" alt="" />
       </swiper-slide>
     </swiper>
@@ -33,6 +36,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/swiper-bundle.css'
 import HomePage2 from './components/HomePage2.vue'
 import HomePage3 from './components/HomePage3.vue'
+import HomePage4 from './components/HomePage4.vue'
 
 const slides = ref([
   { id: 1, image: 'https://image.veseo.cn/gx5jesf9qty5vprnzb', alt: 'Slide 1' },
@@ -54,6 +58,10 @@ const slides = ref([
     img {
       width: 100%;
       object-fit: cover;
+    }
+
+    .home-page {
+      padding: 120px;
     }
   }
 }
