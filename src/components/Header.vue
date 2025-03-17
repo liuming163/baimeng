@@ -26,7 +26,7 @@ const router = useRouter()
 const activeTab = ref('1')
 const tabList = ref([
   { label: '首页', value: '1', path: '/' },
-  { label: '走进柏蒙', value: '2', path: '/about' },
+  { label: '关于柏蒙', value: '2', path: '/about' },
   { label: '案例展示', value: '3', path: '/product' },
   { label: '合作伙伴', value: '4', path: '/cooperate' },
   { label: '联系我们', value: '5', path: '/contact' },

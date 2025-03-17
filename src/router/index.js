@@ -9,7 +9,7 @@ const routes = [
     path: '/about',
     name: 'about',
     meta: {
-      title: '走进柏蒙',
+      title: '关于柏蒙',
     },
     component: () => import(/* webpackChunkName: "about" */ '@/views/about'),
   },

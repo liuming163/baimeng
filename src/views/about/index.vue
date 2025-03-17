@@ -1,6 +1,6 @@
 <template>
   <div class="color">
-    <!-- 走进柏蒙 -->
+    <!-- 关于柏蒙 -->
     about
   </div>
 </template>
