@@ -2,13 +2,14 @@
   <div class="home">
     <!-- 首页 -->
     <swiper
+      :modules="modules"
       :slides-per-view="1"
       :direction="'vertical'"
-      pagination
+      :mousewheel="true"
       class="swiper-box"
     >
       <swiper-slide>
-        <swiper :slides-per-view="1" pagination class="swiper-box">
+        <swiper :slides-per-view="1" class="swiper-box">
           <swiper-slide v-for="slide in slides" :key="slide.id">
             <img :src="slide.image" :alt="slide.alt" />
           </swiper-slide>
@@ -32,17 +33,17 @@
       <swiper-slide>
         <HomePage7 />
       </swiper-slide>
-      <swiper-slide>
-        <img src="https://image.veseo.cn/im3m8f3xyp9hfzzvx9" alt="" />
-      </swiper-slide>
     </swiper>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import { Mousewheel, A11y } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/swiper-bundle.css'
+const modules = [Mousewheel, A11y]
+
 import HomePage2 from './components/HomePage2.vue'
 import HomePage3 from './components/HomePage3.vue'
 import HomePage4 from './components/HomePage4.vue'

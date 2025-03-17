@@ -11,15 +11,21 @@
       </div>
       <div class="contact-swiper">
         <div class="swiper-container">
-          <swiper :slides-per-view="1" pagination class="swiper-box">
-            <swiper-slide v-for="slide in slides" :key="slide.id">
-              <div class="row">
-                <div v-for="item in slide.imgs" :key="item.id" class="col">
-                  <img :src="item.img" alt="合作伙伴" />
+          <div class="swiper-box">
+            <swiper
+              :modules="modules"
+              :slides-per-view="1"
+              :pagination="{ clickable: true }"
+            >
+              <swiper-slide v-for="slide in slides" :key="slide.id">
+                <div class="row">
+                  <div v-for="item in slide.imgs" :key="item.id" class="col">
+                    <img :src="item.img" alt="合作伙伴" />
+                  </div>
                 </div>
-              </div>
-            </swiper-slide>
-          </swiper>
+              </swiper-slide>
+            </swiper>
+          </div>
         </div>
       </div>
     </div>
@@ -45,9 +51,12 @@
 
 <script setup>
 import { ref } from 'vue'
+import { Pagination, A11y } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/swiper-bundle.css'
 import { Paperclip } from '@element-plus/icons-vue'
+
+const modules = [Pagination, A11y]
 
 const slides = ref([
   {
@@ -275,6 +284,10 @@ const companyInfo = ref([
         color: rgba($color: #ffffff, $alpha: 0.6);
       }
     }
+  }
+
+  :deep(.swiper-pagination-bullets.swiper-pagination-horizontal) {
+    bottom: 0;
   }
 }
 </style>
