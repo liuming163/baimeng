@@ -25,6 +25,8 @@ export default defineConfig({
     extensions: ['.js', '.json', '.jsx', '.mjs', '.ts', '.tsx', '.vue'],
   },
   server: {
+    host: '0.0.0.0',
+    port: 5026,
     open: true, // 自动打开浏览器
     proxy: {
       '/api': {
