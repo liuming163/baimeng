@@ -1,12 +1,26 @@
 <template>
   <div class="app">
-    <Header class="header"></Header>
-    <router-view></router-view>
+    <div v-if="isHomePage">
+      <HeaderFixed class="header-fixed"></HeaderFixed>
+      <router-view></router-view>
+    </div>
+    <div v-else>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script setup>
-import Header from '@/components/Header.vue'
+import { ref, watch } from 'vue'
+import HeaderFixed from '@/components/HeaderFixed.vue'
+import { useRoute } from 'vue-router'
+const route = useRoute()
+
+const isHomePage = ref(true) // 是否是首页
+// 监听路由变化, 根据路由路径设置activeTab的值
+watch(route, (newRoute) => {
+  isHomePage.value = newRoute.path === '/home' ? true : false
+})
 </script>
 
 <style lang="scss">
@@ -15,7 +29,7 @@ import Header from '@/components/Header.vue'
 .app {
   position: relative;
 
-  .header {
+  .header-fixed {
     position: fixed;
     top: 0;
     left: 0;
