@@ -70,15 +70,11 @@
       </div>
     </section>
     <!-- 页面主体部分 end -->
-    <!-- 底部栏 start -->
-    <BottomPage></BottomPage>
-    <!-- 底部栏 end -->
   </div>
 </template>
 
 <script setup>
 import { Paperclip } from '@element-plus/icons-vue'
-import BottomPage from '@/components/BottomPage.vue'
 </script>
 
 <style lang="scss" scoped>

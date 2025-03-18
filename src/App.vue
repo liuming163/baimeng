@@ -9,6 +9,7 @@
     <div v-else>
       <Header></Header>
       <router-view></router-view>
+      <BottomPage></BottomPage>
     </div>
   </div>
 </template>
@@ -17,6 +18,8 @@
 import { ref, watch } from 'vue'
 import HeaderFixed from '@/components/HeaderFixed.vue'
 import Header from '@/components/Header.vue'
+import BottomPage from '@/components/BottomPage.vue'
+
 import { useRoute } from 'vue-router'
 const route = useRoute()
 

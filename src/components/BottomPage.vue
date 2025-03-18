@@ -25,6 +25,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { Paperclip } from '@element-plus/icons-vue'
 
 const contactList = ref([
   {
