@@ -1,10 +1,13 @@
 <template>
   <div class="app">
+    <!-- 首页 -->
     <div v-if="isHomePage">
       <HeaderFixed class="header-fixed"></HeaderFixed>
       <router-view></router-view>
     </div>
+    <!-- 其他页面 -->
     <div v-else>
+      <Header></Header>
       <router-view></router-view>
     </div>
   </div>
@@ -13,6 +16,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 import HeaderFixed from '@/components/HeaderFixed.vue'
+import Header from '@/components/Header.vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
 
