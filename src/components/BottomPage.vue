@@ -71,9 +71,10 @@ const companyInfo = ref([
     background-color: #000;
 
     .inner {
-      width: 100%;
+      max-width: 1140px;
       height: 100%;
-      padding: 0 120px;
+      margin: 0 auto;
+      padding: 0 20px;
       box-sizing: border-box;
 
       .t {
