@@ -50,7 +50,7 @@
             <!-- 右侧栏目 -->
             <el-col :span="18">
               <div class="title">
-                <div class="right">右侧面包屑</div>
+                <div class="right">关于柏蒙</div>
               </div>
               <div class="left-title">走进丰杨</div>
               <div class="right">
@@ -73,12 +73,16 @@
       </div>
     </section>
     <!-- 页面主体部分 end -->
+    <!-- 底部栏 start -->
+    <BottomPage></BottomPage>
+    <!-- 底部栏 end -->
   </div>
 </template>
 
 <script setup>
-import TopSwiper from '@/components/TopSwiper.vue'
 import { Paperclip } from '@element-plus/icons-vue'
+import TopSwiper from '@/components/TopSwiper.vue'
+import BottomPage from '@/components/BottomPage.vue'
 </script>
 
 <style lang="scss" scoped>
