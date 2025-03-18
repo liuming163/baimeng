@@ -27,7 +27,7 @@ const swiperList = ref([
 <style lang="scss" scoped>
 .top-swiper {
   width: 100%;
-  padding-top: 120px;
+  padding-top: 20px;
 
   img {
     width: 100%;

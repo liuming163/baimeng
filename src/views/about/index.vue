@@ -1,9 +1,6 @@
 <template>
   <div class="about">
     <!-- 关于柏蒙 -->
-    <!-- 顶部通用轮播图 start -->
-    <TopSwiper></TopSwiper>
-    <!-- 顶部通用轮播图 end -->
     <!-- 页面主体部分 start -->
     <section id="about">
       <div class="container">
@@ -81,7 +78,6 @@
 
 <script setup>
 import { Paperclip } from '@element-plus/icons-vue'
-import TopSwiper from '@/components/TopSwiper.vue'
 import BottomPage from '@/components/BottomPage.vue'
 </script>
 

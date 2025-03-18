@@ -14,6 +14,9 @@
       </ul>
     </div>
   </div>
+  <!-- 顶部通用轮播图 start -->
+  <TopSwiper></TopSwiper>
+  <!-- 顶部通用轮播图 end -->
 </template>
 
 <script setup>
@@ -21,6 +24,8 @@ import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 const route = useRoute()
 const router = useRouter()
+
+import TopSwiper from '@/components/TopSwiper.vue'
 
 // tab栏区域 start
 const activeTab = ref('1')
