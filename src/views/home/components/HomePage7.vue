@@ -125,7 +125,7 @@ const companyInfo = ref([
   },
   {
     id: 2,
-    info: 'Copyright © 合肥丰杨文化传媒有限公司',
+    info: 'Copyright © 北京柏蒙文化传媒有限公司',
   },
   {
     id: 3,

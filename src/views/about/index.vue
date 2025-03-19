@@ -14,7 +14,7 @@
                     <p>
                       <span class="circle"></span>
                       &nbsp;&nbsp;&nbsp;
-                      <span>走进丰杨</span>
+                      <span>关于柏蒙</span>
                       &nbsp;&nbsp;&nbsp;
                       <span class="circle"></span>
                     </p>
@@ -47,14 +47,21 @@
             <!-- 右侧栏目 -->
             <el-col :span="18">
               <div class="title">
-                <div class="right">关于柏蒙</div>
+                <div class="right">
+                  <el-breadcrumb :separator-icon="DArrowRight">
+                    <el-breadcrumb-item :to="{ path: '/' }"
+                      >首页</el-breadcrumb-item
+                    >
+                    <el-breadcrumb-item>关于柏蒙</el-breadcrumb-item>
+                  </el-breadcrumb>
+                </div>
               </div>
-              <div class="left-title">走进丰杨</div>
+              <div class="left-title">关于柏蒙</div>
               <div class="right">
                 <!-- 富文本内容 -->
                 <div class="cont">
                   <p>
-                    合肥丰杨文化传媒有限公司，是一家专业从事企事业单位大型庆典活动，奠基仪式、地产开盘、开业庆典、开幕仪式、文艺演出、商务酒会、商务促销、展览展示、商业美陈，从策划到现场布置以及灯光设备租用的综合性一站式服务公司，公司本着以经营品牌的理念为客户创造效益。
+                    北京柏蒙文化传媒有限公司，是一家专业从事企事业单位大型庆典活动，奠基仪式、地产开盘、开业庆典、开幕仪式、文艺演出、商务酒会、商务促销、展览展示、商业美陈，从策划到现场布置以及灯光设备租用的综合性一站式服务公司，公司本着以经营品牌的理念为客户创造效益。
                   </p>
                   <p>
                     先进的庆典道具为您提供专业的服务，且用我们的专业和我们的诚信服务好每一位顾客。
@@ -74,7 +81,7 @@
 </template>
 
 <script setup>
-import { Paperclip } from '@element-plus/icons-vue'
+import { Paperclip, DArrowRight } from '@element-plus/icons-vue'
 </script>
 
 <style lang="scss" scoped>

@@ -14,7 +14,7 @@
                     <p>
                       <span class="circle"></span>
                       &nbsp;&nbsp;&nbsp;
-                      <span>走进丰杨</span>
+                      <span>新闻动态</span>
                       &nbsp;&nbsp;&nbsp;
                       <span class="circle"></span>
                     </p>
@@ -47,7 +47,14 @@
             <!-- 右侧栏目 -->
             <el-col :span="18">
               <div class="title">
-                <div class="right">关于柏蒙</div>
+                <div class="right">
+                  <el-breadcrumb :separator-icon="DArrowRight">
+                    <el-breadcrumb-item :to="{ path: '/' }"
+                      >首页</el-breadcrumb-item
+                    >
+                    <el-breadcrumb-item>新闻动态</el-breadcrumb-item>
+                  </el-breadcrumb>
+                </div>
               </div>
               <div class="left-title">新闻动态</div>
               <div class="right">
@@ -87,7 +94,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { Paperclip } from '@element-plus/icons-vue'
+import { Paperclip, DArrowRight } from '@element-plus/icons-vue'
 
 const newsList = ref([
   {
