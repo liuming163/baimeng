@@ -55,7 +55,7 @@
                   <el-row>
                     <el-col
                       :span="8"
-                      v-for="item in cooperateList"
+                      v-for="item in filterList"
                       :key="item.id"
                       class="item"
                     >
@@ -73,7 +73,9 @@
                   <el-pagination
                     background
                     layout="prev, pager, next"
-                    :total="50"
+                    :default-page-size="9"
+                    :total="pagination.total"
+                    @change="handleCurrentChange"
                   />
                 </div>
               </div>
@@ -87,7 +89,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { Paperclip } from '@element-plus/icons-vue'
 
 const cooperateList = ref([
@@ -136,7 +138,76 @@ const cooperateList = ref([
     title: '安徽广播电视台',
     img: 'http://image.veseo.cn/n0165l7n27e90vr4hl',
   },
+  {
+    id: 10,
+    title: '玄景禅木坊',
+    img: 'http://image.veseo.cn/weqg2cy1dz4qmq4ybh',
+  },
+  {
+    id: 11,
+    title: '玄景禅木坊',
+    img: 'http://image.veseo.cn/weqg2cy1dz4qmq4ybh',
+  },
+  {
+    id: 12,
+    title: '玄景禅木坊',
+    img: 'http://image.veseo.cn/weqg2cy1dz4qmq4ybh',
+  },
+  {
+    id: 13,
+    title: '玄景禅木坊',
+    img: 'http://image.veseo.cn/weqg2cy1dz4qmq4ybh',
+  },
+  {
+    id: 14,
+    title: '玄景禅木坊',
+    img: 'http://image.veseo.cn/weqg2cy1dz4qmq4ybh',
+  },
+  {
+    id: 15,
+    title: '玄景禅木坊',
+    img: 'http://image.veseo.cn/weqg2cy1dz4qmq4ybh',
+  },
+  {
+    id: 16,
+    title: '玄景禅木坊',
+    img: 'http://image.veseo.cn/weqg2cy1dz4qmq4ybh',
+  },
+  {
+    id: 17,
+    title: '玄景禅木坊',
+    img: 'http://image.veseo.cn/weqg2cy1dz4qmq4ybh',
+  },
+  {
+    id: 18,
+    title: '玄景禅木坊',
+    img: 'http://image.veseo.cn/weqg2cy1dz4qmq4ybh',
+  },
 ])
+// 分页区域 start
+const pagination = ref({
+  currentPage: 1,
+  total: cooperateList.value.length,
+})
+
+const filterList = computed(() => {
+  return getItemByPage(pagination.value.currentPage)
+})
+
+const handleCurrentChange = (page) => {
+  setTimeout(() => {
+    pagination.value.currentPage = page
+  }, 200)
+}
+
+const getItemByPage = (pageNum) => {
+  const start = (pageNum - 1) * 9 // 开始索引
+  const end = start + 9 // 结束索引
+
+  const pageItems = cooperateList.value.slice(start, end)
+  return pageItems
+}
+// 分页区域 end
 </script>
 
 <style lang="scss" scoped>
