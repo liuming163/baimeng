@@ -2,7 +2,7 @@
   <div class="home-page3">
     <div class="title">
       <p>CASE RECOMMENDED</p>
-      <h3>案例展示</h3>
+      <h3>新闻动态</h3>
       <div class="line"></div>
       <div class="det">
         无论是创意、设计、还是体验，我们都力求颠覆传统，在每一个细节中做到完美极致！

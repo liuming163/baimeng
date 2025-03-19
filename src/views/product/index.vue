@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <!-- 案例展示 -->
-    案例展示
+    <!-- 新闻动态 -->
+    新闻动态
   </div>
 </template>

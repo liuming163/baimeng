@@ -25,7 +25,7 @@ const routes = [
     path: '/product',
     name: 'product',
     meta: {
-      title: '案例展示',
+      title: '新闻动态',
     },
     component: () =>
       import(/* webpackChunkName: "product" */ '@/views/product'),
