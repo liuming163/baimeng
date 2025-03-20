@@ -28,15 +28,19 @@
                   <div class="bottom-main">
                     <ul class="info">
                       <li class="item">
-                        <el-icon color="#fff" size="20px" class="icon"
-                          ><Paperclip
-                        /></el-icon>
+                        <img
+                          src="../../assets/imgs/phone.png"
+                          class="icon"
+                          alt=""
+                        />
                         <span>15755173533</span>
                       </li>
                       <li class="item">
-                        <el-icon color="#fff" size="20px" class="icon"
-                          ><Paperclip
-                        /></el-icon>
+                        <img
+                          src="../../assets/imgs/location.png"
+                          class="icon"
+                          alt=""
+                        />
                         <span>包河区罍街安商1980C座303</span>
                       </li>
                     </ul>
@@ -97,7 +101,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { Paperclip, DArrowRight } from '@element-plus/icons-vue'
+import { DArrowRight } from '@element-plus/icons-vue'
 
 const cooperateList = ref([
   {
@@ -299,6 +303,8 @@ const getItemByPage = (pageNum) => {
                 font-size: 16px;
 
                 .icon {
+                  width: 20px;
+                  height: 20px;
                   vertical-align: middle;
                 }
 

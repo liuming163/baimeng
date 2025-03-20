@@ -34,7 +34,7 @@
         <div class="t">
           <div class="l">
             <div v-for="item in contactList" :key="item.id" class="item">
-              <el-icon color="#fff" size="20px"><Paperclip /></el-icon>
+              <img :src="item.img" alt="" class="icon" />
               <span>{{ item.info }}</span>
             </div>
           </div>
@@ -54,7 +54,10 @@ import { ref } from 'vue'
 import { Pagination, A11y } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/swiper-bundle.css'
-import { Paperclip } from '@element-plus/icons-vue'
+
+import qq from '@/assets/imgs/qq.png'
+import phone from '@/assets/imgs/phone.png'
+import location from '@/assets/imgs/location.png'
 
 const modules = [Pagination, A11y]
 
@@ -101,20 +104,23 @@ const slides = ref([
 ])
 
 const contactList = ref([
-  {
+{
     id: 1,
     icon: 'Iphone',
     info: '手机：15755173533',
+    img: phone,
   },
   {
     id: 2,
     icon: 'ChromeFilled',
     info: 'QQ：405058688',
+    img: qq,
   },
   {
     id: 3,
     icon: 'LocationInformation',
     info: '地址：包河区罍街安商1980C座303',
+    img: location,
   },
 ])
 
@@ -256,6 +262,11 @@ const companyInfo = ref([
             display: flex;
             align-items: center;
             box-sizing: border-box;
+
+            .icon {
+              width: 20px;
+              height: 20px;
+            }
 
             span {
               font-size: 18px;
