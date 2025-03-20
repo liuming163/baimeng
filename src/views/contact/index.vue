@@ -93,6 +93,13 @@
                       </div>
                     </el-col>
                   </el-row>
+                  <el-row>
+                    <el-col :span="24">
+                      <div class="map">
+                        <img src="../../assets/imgs/map.png" alt="" />
+                      </div>
+                    </el-col>
+                  </el-row>
                 </div>
               </div>
             </el-col>
@@ -268,6 +275,14 @@ import { DArrowRight } from '@element-plus/icons-vue'
                 box-shadow 0.15s ease-in-out;
               box-shadow: 0 1px 6px 0 rgba(8, 1, 2, 0.2);
               text-align: center;
+            }
+          }
+
+          .map {
+            width: 100%;
+
+            img {
+              width: 100%;
             }
           }
         }
