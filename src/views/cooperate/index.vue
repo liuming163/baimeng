@@ -1,6 +1,6 @@
 <template>
   <div class="cooperate">
-    <!-- 关于柏蒙 -->
+    <!-- 合作伙伴 -->
     <!-- 页面主体部分 start -->
     <section id="cooperate">
       <div class="container">
